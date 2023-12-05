@@ -10,14 +10,16 @@ public class Study1 {
 		System.out.println("정수 하나를 입력하세요");
 		
 		int num = sc.nextInt();
-		
+		int count = 1;
 //		입력받은 정수의 약수를 출력하세요.
 		for(int i = 1; i<= num /2; i++) {
 			if (num % i == 0) {
 				System.out.print(i+" ");
+				count++;
 			}
 		}
 		System.out.println(num);
+		System.out.println("약수의 개수 : "+count);
 	}
 
 }
