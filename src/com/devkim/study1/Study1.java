@@ -12,16 +12,12 @@ public class Study1 {
 		int num = sc.nextInt();
 		
 //		입력받은 정수의 약수를 출력하세요.
-		for(int j = 1; j <= 100; j++) {
-			System.out.println(j);
-			for(int i = 1; i<= j /2; i++) {
-				if (j % i == 0) {
-					System.out.print(i+" ");
-				}
+		for(int i = 1; i<= num /2; i++) {
+			if (num % i == 0) {
+				System.out.print(i+" ");
 			}
-			System.out.println(j);
-
 		}
+		System.out.println(num);
 	}
 
 }
