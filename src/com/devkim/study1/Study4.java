@@ -7,18 +7,20 @@ public class Study4 {
     static int level = 1;
     static int gold = 0;
     public static void main(String[] args) {
-        login();
-        while(true){
-            monster();
-            levelUp();
-            state();
-            if (level%5 == 0 && endCheck()) {
-                break;
+        if(login()){
+            while(true){
+                monster();
+                levelUp();
+                state();
+                if (level%5 == 0 && endCheck()) {
+                    break;
+                }
             }
-        }
-        state();
+            state();
+            System.out.println("게임을 종료합니다.");
+        }        
     }
-    public static void login(){
+    public static boolean login(){
         Scanner sc = new Scanner(System.in);
         String id = "user01";
         String pwd = "1234";
@@ -30,8 +32,10 @@ public class Study4 {
         System.out.println(id+input_id+pwd+input_pwd);
         if(id.equals(input_id) && pwd.equals(input_pwd)){
             System.out.println("로그인에 성공했습니다.");
+            return true;
         } else {
             System.out.println("로그인에 실패했습니다.");
+            return false;
         }
     }
     public static void monster(){
@@ -75,6 +79,7 @@ public class Study4 {
     public static void state(){
         System.out.println("현제 레벨 : "+level);
         System.out.println("현제 보유 골드 : "+ gold);
+        System.out.println("=============================");
     }
     public static boolean endCheck(){
         Scanner sc = new Scanner(System.in);
