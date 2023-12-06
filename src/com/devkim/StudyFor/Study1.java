@@ -1,4 +1,4 @@
-package com.devkim.study1;
+package com.devkim.StudyFor;
 
 import java.util.Scanner;
 
