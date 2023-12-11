@@ -2,9 +2,19 @@ package com.devkim.StudyArray;
 
 public class Study3 {
     public static void main(String[] args) {
-        int[] arr = new int[100];
+        int[] arr = new int[100];        
+        int[] check = new int[101];
         for(int i = 0; i < 100; i++){
-            arr[i] = (int)(Math.random() * 100 + 1);
+            int random = (int)(Math.random()*100+1);
+            while (true){
+                if(check[random] == 1){
+                    random = (int)(Math.random()*100+1);
+                } else {
+                    check[random] = 1;
+                    arr[i] = random;
+                    break;
+                }
+            }
         }
         for(int i =0; i < arr.length; i++){
             System.out.print(arr[i]+" ");
