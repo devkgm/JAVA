@@ -1,11 +1,15 @@
 package com.devkim.rpg;
 
-public class Magition {
-    String name;
-    int hp;
+public class Magition extends Character {
     int mp;
-    public void info(){
-        
-        System.out.println("이름: "+name+" 체력: "+hp+" 마나: "+mp);
+
+    public void info() {
+
+        super.info();
+        System.out.println(this.mp);
+    }
+
+    public void attack() {
+        System.out.println("매직완드");
     }
 }
