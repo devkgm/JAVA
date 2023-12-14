@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CardController {
     Scanner sc = new Scanner(System.in);
-    Card[] cards = new Card[0];
+    Card[] cards = null;
 
     public void clearConsole() {
         System.out.print("\033[H\033[2J");

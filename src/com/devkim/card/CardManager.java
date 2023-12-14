@@ -19,9 +19,14 @@ public class CardManager {
     }
 
     public static Card[] addCard(Card[] _cards) {
-        Card[] cards = new Card[_cards.length + 1];
+        Card[] cards = null;
+        if (_cards == null) {
+            cards = new Card[1];
+        } else {
+            cards = new Card[_cards.length + 1];
+        }
 
-        for (int i = 0; i < _cards.length; i++) {
+        for (int i = 0; i < cards.length - 1; i++) {
             cards[i] = _cards[i];
         }
         cards[cards.length - 1] = getCardInfo();
