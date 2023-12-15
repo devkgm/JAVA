@@ -2,8 +2,12 @@ package com.devkim.api;
 
 public class ApiMain {
     public static void main(String[] args) {
-        WeatherService ws = new WeatherService();
-        ws.getData();
-        ws.showData();
+        StringBuffer sb = new StringBuffer();
+        sb.append("abc");
+        sb.append(123);
+        System.out.println(sb);
+
+        String string = sb.toString();
+        System.out.println(string);
     }
 }
